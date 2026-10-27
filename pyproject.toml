@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "document-summarizer"
+version = "0.1.0"
+description = "Beginner-friendly CLI that summarizes documents using a local OpenAI-compatible endpoint (default Ollama)."
+requires-python = ">=3.8"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "Asdale Dynamics, LLC", email = "dylanasdale@users.noreply.github.com"}]
+keywords = ["cli", "summarizer", "ollama", "local-ai", "markdown"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Text Processing",
+]
+
+[project.scripts]
+document-summarizer = "document_summarizer:main"
+
+[tool.setuptools]
+py-modules = ["document_summarizer"]
